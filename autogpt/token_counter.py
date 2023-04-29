@@ -3,6 +3,7 @@ from typing import Dict, List
 
 import tiktoken
 
+from autogpt.llm.base import Message
 from autogpt.logs import logger
 
 

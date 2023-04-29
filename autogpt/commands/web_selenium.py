@@ -1,8 +1,15 @@
 """Selenium web scraping module."""
 from selenium import webdriver
+<<<<<<< HEAD
 from autogpt.processing.html import extract_hyperlinks, format_hyperlinks
 import autogpt.processing.text as summary
 from bs4 import BeautifulSoup
+=======
+from selenium.common.exceptions import WebDriverException
+from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+>>>>>>> b8478a96aea94f9f9f34cf966a0f7ef27c6d04c4
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -31,7 +38,14 @@ def browse_website(url: str, question: str) -> Tuple[str, WebDriver]:
     Returns:
         Tuple[str, WebDriver]: The answer and links to the user and the webdriver
     """
-    driver, text = scrape_text_with_selenium(url)
+    try:
+        driver, text = scrape_text_with_selenium(url)
+    except WebDriverException as e:
+        # These errors are often quite long and include lots of context.
+        # Just grab the first line.
+        msg = e.msg.split("\n")[0]
+        return f"Error: {msg}", None
+
     add_header(driver)
     summary_text = summary.summarize_text(url, text, question, driver)
     links = scrape_links_with_selenium(driver, url)

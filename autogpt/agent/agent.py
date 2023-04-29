@@ -3,9 +3,15 @@ from autogpt.app import execute_command, get_command
 
 from autogpt.chat import chat_with_ai, create_chat_message
 from autogpt.config import Config
+<<<<<<< HEAD
 from autogpt.json_fixes.bracket_termination import (
     attempt_to_fix_json_by_finding_outermost_brackets,
 )
+=======
+from autogpt.json_utils.json_fix_llm import fix_json_using_multiple_techniques
+from autogpt.json_utils.utilities import LLM_DEFAULT_RESPONSE_FORMAT, validate_json
+from autogpt.llm import chat_with_ai, create_chat_completion, create_chat_message
+>>>>>>> b8478a96aea94f9f9f34cf966a0f7ef27c6d04c4
 from autogpt.logs import logger, print_assistant_thoughts
 from autogpt.speech import say_text
 from autogpt.spinner import Spinner
@@ -71,7 +77,20 @@ class Agent:
                 )  # TODO: This hardcodes the model to use GPT3.5. Make this an argument
 
             # Print Assistant thoughts
+<<<<<<< HEAD
             print_assistant_thoughts(self.ai_name, assistant_reply)
+=======
+            if assistant_reply_json != {}:
+                validate_json(assistant_reply_json, LLM_DEFAULT_RESPONSE_FORMAT)
+                # Get command name and arguments
+                try:
+                    print_assistant_thoughts(
+                        self.ai_name, assistant_reply_json, cfg.speak_mode
+                    )
+                    command_name, arguments = get_command(assistant_reply_json)
+                    if cfg.speak_mode:
+                        say_text(f"I want to execute {command_name}")
+>>>>>>> b8478a96aea94f9f9f34cf966a0f7ef27c6d04c4
 
             # Get command name and arguments
             try:
@@ -160,6 +179,7 @@ class Agent:
                 )
                 if self.next_action_count > 0:
                     self.next_action_count -= 1
+<<<<<<< HEAD
 
             memory_to_add = (
                 f"Assistant Reply: {assistant_reply} "
@@ -168,6 +188,8 @@ class Agent:
             )
 
             self.memory.add(memory_to_add)
+=======
+>>>>>>> b8478a96aea94f9f9f34cf966a0f7ef27c6d04c4
 
             # Check if there's a result from the command append it to the message
             # history

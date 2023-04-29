@@ -4,8 +4,19 @@ from openai.error import RateLimitError
 
 from autogpt import token_counter
 from autogpt.config import Config
+<<<<<<< HEAD:autogpt/chat.py
 from autogpt.llm_utils import create_chat_completion
 from autogpt.logs import logger
+=======
+from autogpt.llm.api_manager import ApiManager
+from autogpt.llm.base import Message
+from autogpt.llm.llm_utils import create_chat_completion
+from autogpt.llm.token_counter import count_message_tokens
+from autogpt.logs import logger
+from autogpt.memory_management.store_memory import (
+    save_memory_trimmed_from_context_window,
+)
+>>>>>>> b8478a96aea94f9f9f34cf966a0f7ef27c6d04c4:autogpt/llm/chat.py
 
 cfg = Config()
 
@@ -118,6 +129,11 @@ def chat_with_ai(
                     [message_to_add], model
                 )
                 if current_tokens_used + tokens_to_add > send_token_limit:
+                    save_memory_trimmed_from_context_window(
+                        full_message_history,
+                        next_message_to_add_index,
+                        permanent_memory,
+                    )
                     break
 
                 # Add the most recent message to the start of the current context,
