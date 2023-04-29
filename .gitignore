@@ -8,15 +8,19 @@ package-lock.json
 auto_gpt_workspace/*
 *.mpeg
 .env
+<<<<<<< HEAD
 azure.yaml
 *venv/*
+=======
+venv/*
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 outputs/*
 ai_settings.yaml
 last_run_ai_settings.yaml
 .vscode
-.idea/*
 auto-gpt.json
 log.txt
+<<<<<<< HEAD
 log-ingestion.txt
 logs
 *.log
@@ -157,3 +161,5 @@ vicuna-*
 
 # mac
 .DS_Store
+=======
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a

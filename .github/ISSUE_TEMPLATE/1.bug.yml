@@ -16,6 +16,7 @@ body:
       value: |
         Please provide a searchable summary of the issue in the title above ⬆️.
 
+<<<<<<< HEAD
         ⚠️ SUPER-busy repo, please help the volunteer maintainers.
         The less time we spend here, the more time we spend building AutoGPT.
         
@@ -28,6 +29,9 @@ body:
           - Provide commit-hash (`git rev-parse HEAD` gets it)
           - If it's a pip/packages issue, provide pip version, python version
           - If it's a crash, provide traceback.
+=======
+        Thanks for contributing by creating an issue! ❤️
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
   - type: checkboxes
     attributes:
       label: GPT-3 or GPT-4
@@ -53,7 +57,7 @@ body:
     attributes:
       label: Your prompt 📝
       description: |
-        If applicable please provide the prompt you are using. You can find your last-used prompt in last_run_ai_settings.yaml.
+        Please provide the prompt you are using. You can find your last-used prompt in last_run_ai_settings.yaml.
       value: |
         ```yaml
         # Paste your prompt here

@@ -1,4 +1,5 @@
 # Auto-GPT: An Autonomous GPT-4 Experiment
+<<<<<<< HEAD
 ### 🔴 🔴 🔴  Urgent: USE `stable` not `master`  🔴 🔴 🔴
 
 > This information takes precedence over any other information provided and should be followed accordingly.
@@ -10,12 +11,17 @@ Please download the latest `stable` release from here: https://github.com/Torant
 [![Twitter Follow](https://img.shields.io/twitter/follow/siggravitas?style=social)](https://twitter.com/SigGravitas)
 [![Discord Follow](https://dcbadge.vercel.app/api/server/autogpt?style=flat)](https://discord.gg/autogpt)
 [![Unit Tests](https://github.com/Torantulino/Auto-GPT/actions/workflows/ci.yml/badge.svg)](https://github.com/Torantulino/Auto-GPT/actions/workflows/ci.yml)
+=======
+![GitHub Repo stars](https://img.shields.io/github/stars/Torantulino/auto-gpt?style=social)
+![Twitter Follow](https://img.shields.io/twitter/follow/siggravitas?style=social)
+[![](https://dcbadge.vercel.app/api/server/PQ7VX6TY4t?style=flat)](https://discord.gg/PQ7VX6TY4t)
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 
-Auto-GPT is an experimental open-source application showcasing the capabilities of the GPT-4 language model. This program, driven by GPT-4, chains together LLM "thoughts", to autonomously achieve whatever goal you set. As one of the first examples of GPT-4 running fully autonomously, Auto-GPT pushes the boundaries of what is possible with AI.
+Auto-GPT is an experimental open-source application showcasing the capabilities of the GPT-4 language model. This program, driven by GPT-4, autonomously develops and manages businesses to increase net worth. As one of the first examples of GPT-4 running fully autonomously, Auto-GPT pushes the boundaries of what is possible with AI.
 
 ### Demo (30/03/2023):
-
 https://user-images.githubusercontent.com/22963551/228855501-2f5777cf-755b-4407-a643-c7299e5b6419.mp4
+
 
 <h2 align="center"> 💖 Help Fund Auto-GPT's Development 💖</h2>
 <p align="center">
@@ -39,11 +45,17 @@ Development of this free, open-source project is made possible by all the <a hre
 
 
 
+
 ## Table of Contents
 
 - [Auto-GPT: An Autonomous GPT-4 Experiment](#auto-gpt-an-autonomous-gpt-4-experiment)
+<<<<<<< HEAD
     - [🔴 🔴 🔴  Urgent: USE `stable` not `master`  🔴 🔴 🔴](#----urgent-use-stable-not-master----)
     - [Demo (30/03/2023):](#demo-30032023)
+=======
+    - [Demo (30/03/2023):](#demo-30032023)
+  - [💖 Help Fund Auto-GPT's Development](#-help-fund-auto-gpts-development)
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
   - [Table of Contents](#table-of-contents)
   - [🚀 Features](#-features)
   - [📋 Requirements](#-requirements)
@@ -73,6 +85,7 @@ Development of this free, open-source project is made possible by all the <a hre
   - [Run tests](#run-tests)
   - [Run linter](#run-linter)
 
+
 ## 🚀 Features
 
 - 🌐 Internet access for searches and information gathering
@@ -82,6 +95,7 @@ Development of this free, open-source project is made possible by all the <a hre
 - 🗃️ File storage and summarization with GPT-3.5
 
 ## 📋 Requirements
+<<<<<<< HEAD
 
 - environments(just choose one)
   - [vscode + devcontainer](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers): It has been configured in the .devcontainer folder and can be used directly
@@ -93,6 +107,13 @@ Optional:
 - Memory backend
   - [PINECONE API key](https://www.pinecone.io/) (If you want Pinecone backed memory)
   - [Milvus](https://milvus.io/) (If you want Milvus as memory backend)
+=======
+- [Python 3.8 or later](https://www.tutorialspoint.com/how-to-install-python-in-windows)
+- OpenAI API key
+- [PINECONE API key](https://www.pinecone.io/)
+
+Optional:
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 - ElevenLabs Key (If you want the AI to speak)
 
 ## 💾 Installation
@@ -101,6 +122,7 @@ To install Auto-GPT, follow these steps:
 
 1. Make sure you have all the **requirements** listed above, if not, install/get them
 
+<<<<<<< HEAD
 _To execute the following commands, open a CMD, Bash, or Powershell window by navigating to a folder on your computer and typing `CMD` in the folder path at the top, then press enter._
 
 2. Clone the repository: For this step, you need Git installed. Alternatively, you can download the zip file by clicking the button at the top of this page ☝️
@@ -150,9 +172,41 @@ pip install -r requirements.txt
 
 1. Run `autogpt` Python module in your terminal
 
+=======
+*The following commands should be executed in a CMD, Bash or Powershell window. To do this, go to a folder on your computer, click in the folder path at the top and type CMD, then press enter.*
+
+1. Clone the repository:
+For this step you need Git installed, but you can just download the zip file instead by clicking the button at the top of this page ☝️
+```
+git clone https://github.com/Torantulino/Auto-GPT.git
+```
+
+2. Navigate to the project directory:
+*(Type this into your CMD window, you're aiming to navigate the CMD window to the repository you just downloaded)*
+```
+cd 'Auto-GPT'
+```
+
+3. Install the required dependencies:
+*(Again, type this into your CMD window)*
+```
+pip install -r requirements.txt
+```
+
+4. Rename `.env.template` to `.env` and fill in your `OPENAI_API_KEY`. If you plan to use Speech Mode, fill in your `ELEVEN_LABS_API_KEY` as well.
+  - Obtain your OpenAI API key from: https://platform.openai.com/account/api-keys.
+  - Obtain your ElevenLabs API key from: https://elevenlabs.io. You can view your xi-api-key using the "Profile" tab on the website.
+  - If you want to use GPT on an Azure instance, set `USE_AZURE` to `True` and provide the `OPENAI_AZURE_API_BASE`, `OPENAI_AZURE_API_VERSION` and `OPENAI_AZURE_DEPLOYMENT_ID` values as explained here: https://pypi.org/project/openai/ in the `Microsoft Azure Endpoints` section
+
+## 🔧 Usage
+
+1. Run the `main.py` Python script in your terminal:
+*(Type this into your CMD window)*
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 ```
 python -m autogpt
 ```
+<<<<<<< HEAD
 
 2. After each action, choose from options to authorize command(s),
 exit the program, or provide feedback to the AI.
@@ -233,6 +287,17 @@ You can set up paid account at https://platform.openai.com/account/billing/overv
 
 ![For OpenAI API key to work, set up paid account at OpenAI API > Billing](./docs/imgs/openai-api-key-billing-paid-account.png)
 
+=======
+2. After each of AUTO-GPT's actions, type "NEXT COMMAND" to authorise them to continue.
+3. To exit the program, type "exit" and press Enter.
+
+## 🗣️ Speech Mode
+Use this to use TTS for Auto-GPT
+```
+python scripts/main.py --speak
+
+```
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 
 ## 🔍 Google API Keys Configuration
 
@@ -245,25 +310,39 @@ To use the `google_official_search` command, you need to set up your Google API 
 4. Go to the [APIs & Services Dashboard](https://console.cloud.google.com/apis/dashboard) and click "Enable APIs and Services". Search for "Custom Search API" and click on it, then click "Enable".
 5. Go to the [Credentials](https://console.cloud.google.com/apis/credentials) page and click "Create Credentials". Choose "API Key".
 6. Copy the API key and set it as an environment variable named `GOOGLE_API_KEY` on your machine. See setting up environment variables below.
+<<<<<<< HEAD
 7. [Enable](https://console.developers.google.com/apis/api/customsearch.googleapis.com) the Custom Search API on your project. (Might need to wait few minutes to propagate)
 8. Go to the [Custom Search Engine](https://cse.google.com/cse/all) page and click "Add".
 9. Set up your search engine by following the prompts. You can choose to search the entire web or specific sites.
 10. Once you've created your search engine, click on "Control Panel" and then "Basics". Copy the "Search engine ID" and set it as an environment variable named `CUSTOM_SEARCH_ENGINE_ID` on your machine. See setting up environment variables below.
+=======
+7. Go to the [Custom Search Engine](https://cse.google.com/cse/all) page and click "Add".
+8. Set up your search engine by following the prompts. You can choose to search the entire web or specific sites.
+9.  Once you've created your search engine, click on "Control Panel" and then "Basics". Copy the "Search engine ID" and set it as an environment variable named `CUSTOM_SEARCH_ENGINE_ID` on your machine. See setting up environment variables below.
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 
-_Remember that your free daily custom search quota allows only up to 100 searches. To increase this limit, you need to assign a billing account to the project to profit from up to 10K daily searches._
+*Remember that your free daily custom search quota allows only up to 100 searches. To increase this limit, you need to assign a billing account to the project to profit from up to 10K daily searches.*
 
 ### Setting up environment variables
+<<<<<<< HEAD
 
 For Windows Users:
 
 ```bash
+=======
+   For Windows Users:
+```
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 setx GOOGLE_API_KEY "YOUR_GOOGLE_API_KEY"
 setx CUSTOM_SEARCH_ENGINE_ID "YOUR_CUSTOM_SEARCH_ENGINE_ID"
 ```
-
 For macOS and Linux users:
+<<<<<<< HEAD
 
 ```bash
+=======
+```
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 export GOOGLE_API_KEY="YOUR_GOOGLE_API_KEY"
 export CUSTOM_SEARCH_ENGINE_ID="YOUR_CUSTOM_SEARCH_ENGINE_ID"
 ```
@@ -272,6 +351,7 @@ export CUSTOM_SEARCH_ENGINE_ID="YOUR_CUSTOM_SEARCH_ENGINE_ID"
 
 By default, Auto-GPT is going to use LocalCache instead of redis or Pinecone.
 
+<<<<<<< HEAD
 To switch to either, change the `MEMORY_BACKEND` env variable to the value that you want:
 
 * `local` (default) uses a local JSON cache file
@@ -292,6 +372,16 @@ docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server:la
 2. Set the following environment variables
 > Replace **PASSWORD** in angled brackets (<>)
 ```bash
+=======
+Run:
+```
+docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server:latest
+```
+See https://hub.docker.com/r/redis/redis-stack-server for setting a password and additional configuration.
+
+Set the following environment variables:
+```
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 MEMORY_BACKEND=redis
 REDIS_HOST=localhost
 REDIS_PORT=6379
@@ -307,9 +397,15 @@ To persist memory stored in Redis
 
 You can specify the memory index for redis using the following:
 
+<<<<<<< HEAD
 ```bash
 MEMORY_INDEX=<WHATEVER>
 ```
+=======
+````
+MEMORY_INDEX=whatever
+````
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 
 ### 🌲 Pinecone API Key Setup
 
@@ -319,31 +415,51 @@ Pinecone enables the storage of vast amounts of vector-based memory, allowing fo
 2. Choose the `Starter` plan to avoid being charged.
 3. Find your API key and region under the default project in the left sidebar.
 
+<<<<<<< HEAD
 In the `.env` file set:
 - `PINECONE_API_KEY`
 - `PINECONE_ENV` (example: _"us-east4-gcp"_)
 - `MEMORY_BACKEND=pinecone`
+=======
+### Setting up environment variables
+
+Simply set them in the `.env` file. 
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 
 Alternatively, you can set them from the command line (advanced):
 
 For Windows Users:
+<<<<<<< HEAD
 
 ```bash
 setx PINECONE_API_KEY "<YOUR_PINECONE_API_KEY>"
 setx PINECONE_ENV "<YOUR_PINECONE_REGION>" # e.g: "us-east4-gcp"
 setx MEMORY_BACKEND "pinecone"
+=======
 ```
+setx PINECONE_API_KEY "YOUR_PINECONE_API_KEY"
+setx PINECONE_ENV "Your pinecone region" # something like: us-east4-gcp
 
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
+```
 For macOS and Linux users:
+<<<<<<< HEAD
 
 ```bash
 export PINECONE_API_KEY="<YOUR_PINECONE_API_KEY>"
 export PINECONE_ENV="<YOUR_PINECONE_REGION>" # e.g: "us-east4-gcp"
 export MEMORY_BACKEND="pinecone"
+=======
+```
+export PINECONE_API_KEY="YOUR_PINECONE_API_KEY"
+export PINECONE_ENV="Your pinecone region" # something like: us-east4-gcp
+
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 ```
 
 ### Milvus Setup
 
+<<<<<<< HEAD
 [Milvus](https://milvus.io/) is a open-source, high scalable vector database to storage huge amount of vector-based memory and provide fast relevant search.
 
 - setup milvus database, keep your pymilvus version and milvus version same to avoid compatible issues.
@@ -376,10 +492,13 @@ USE_WEAVIATE_EMBEDDED=False # set to True to run Embedded Weaviate
 MEMORY_INDEX="Autogpt" # name of the index to create for the application
 ```
  
+=======
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 ## View Memory Usage
 
 1. View memory usage by using the `--debug` flag :)
 
+<<<<<<< HEAD
 
 ## 🧠 Memory pre-seeding
 
@@ -431,30 +550,50 @@ It is potentially dangerous and may cause your AI to run forever or carry out ac
 Use at your own risk.
 
 1. Run the `autogpt` python module in your terminal:
+=======
+
+## 💀 Continuous Mode ⚠️
+Run the AI **without** user authorisation, 100% automated.
+Continuous mode is not recommended.
+It is potentially dangerous and may cause your AI to run forever or carry out actions you would not usually authorise.
+Use at your own risk.
+1. Run the `main.py` Python script in your terminal:
+```
+python scripts/main.py --continuous
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 
 ```bash
 python -m autogpt --speak --continuous
 ```
-
 2. To exit the program, press Ctrl + C
 
 ## GPT3.5 ONLY Mode
-
 If you don't have access to the GPT4 api, this mode will allow you to use Auto-GPT!
+<<<<<<< HEAD
 
 ```bash
 python -m autogpt --speak --gpt3only
+=======
 ```
-
+python scripts/main.py --gpt3only
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
+```
 It is recommended to use a virtual machine for tasks that require high security measures to prevent any potential harm to the main computer's system and data.
 
 ## 🖼 Image Generation
+<<<<<<< HEAD
 
 By default, Auto-GPT uses DALL-e for image generation. To use Stable Diffusion, a [Hugging Face API Token](https://huggingface.co/settings/tokens) is required.
 
 Once you have a token, set these variables in your `.env`:
 
 ```bash
+=======
+By default, Auto-GPT uses DALL-e for image generation. To use Stable Diffusion, a [HuggingFace API Token](https://huggingface.co/settings/tokens) is required.
+
+Once you have a token, set these variables in your `.env`:
+```
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 IMAGE_PROVIDER=sd
 HUGGINGFACE_API_TOKEN="YOUR_HUGGINGFACE_API_TOKEN"
 ```
@@ -465,7 +604,6 @@ sudo Xvfb :10 -ac -screen 0 1024x768x24 & DISPLAY=:10 <YOUR_CLIENT>
 ```
 
 ## ⚠️ Limitations
-
 This experiment aims to showcase the potential of GPT-4 but comes with some limitations:
 
 1. Not a polished application or product, just an experiment
@@ -494,6 +632,7 @@ Stay up-to-date with the latest news, updates, and insights about Auto-GPT by fo
 
 We look forward to connecting with you and hearing your thoughts, ideas, and experiences with Auto-GPT. Join us on Twitter and let's explore the future of AI together!
 
+<<<<<<< HEAD
 <p align="center">
   <a href="https://star-history.com/#Torantulino/auto-gpt&Date">
     <img src="https://api.star-history.com/svg?repos=Torantulino/auto-gpt&type=Date" alt="Star History Chart">
@@ -526,3 +665,5 @@ flake8 autogpt/ tests/
 # Or, if you want to run flake8 with the same configuration as the CI:
 flake8 autogpt/ tests/ --select E303,W293,W291,W292,E305,E231,E302
 ```
+=======
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a

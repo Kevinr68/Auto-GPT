@@ -15,6 +15,7 @@ pinecone-client==2.2.1
 redis
 orjson
 Pillow
+<<<<<<< HEAD
 selenium
 webdriver-manager
 coverage
@@ -28,3 +29,5 @@ gitpython==3.1.31
 pytest
 pytest-mock
 tweepy
+=======
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a

@@ -51,7 +51,7 @@ class AIConfig:
              DEFAULT: "../ai_settings.yaml"
 
         Returns:
-            cls (object): An instance of given cls object
+            cls (object): A instance of given cls object
         """
 
         try:
@@ -94,8 +94,12 @@ class AIConfig:
             None
 
         Returns:
+<<<<<<< HEAD:autogpt/config/ai_config.py
             full_prompt (str): A string containing the initial prompt for the user
               including the ai_name, ai_role and ai_goals.
+=======
+            full_prompt (str): A string containing the intitial prompt for the user including the ai_name, ai_role and ai_goals.
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a:scripts/ai_config.py
         """
 
         prompt_start = (

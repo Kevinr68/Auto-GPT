@@ -6,6 +6,7 @@ This document provides guidelines and best practices to help you contribute effe
 
 ## Table of Contents
 
+<<<<<<< HEAD
 - [Code of Conduct](#code-of-conduct)
 - [Getting Started](#getting-started)
 - [How to Contribute](#how-to-contribute)
@@ -15,6 +16,12 @@ This document provides guidelines and best practices to help you contribute effe
 - [Style Guidelines](#style-guidelines)
   - [Code Formatting](#code-formatting)
   - [Pre-Commit Hooks](#pre-commit-hooks)
+=======
+```
+git clone https://github.com/Torantulino/Auto-GPT
+```
+3. Create a new branch for your changes using the following command:
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a
 
 ## Code of Conduct
 

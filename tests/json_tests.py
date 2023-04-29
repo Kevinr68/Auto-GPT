@@ -71,6 +71,8 @@ class TestParseJson(unittest.TestCase):
             fix_and_parse_json(json_str, try_to_fix_with_gpt=False), good_obj
         )
 
+
+
     def test_invalid_json_leading_sentence_with_gpt(self):
         # Test that a REALLY invalid JSON string raises an error when try_to_fix_with_gpt is False
         json_str = """I will first need to browse the repository (https://github.com/Torantulino/Auto-GPT) and identify any potential bugs that need fixing. I will use the "browse_website" command for this.
@@ -110,5 +112,10 @@ class TestParseJson(unittest.TestCase):
         )
 
 
+<<<<<<< HEAD:tests/unit/json_tests.py
 if __name__ == "__main__":
+=======
+
+if __name__ == '__main__':
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a:tests/json_tests.py
     unittest.main()

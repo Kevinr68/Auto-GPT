@@ -38,6 +38,7 @@ class LocalCache(MemoryProviderSingleton):
         """
         self.filename = f"{cfg.memory_index}.json"
         if os.path.exists(self.filename):
+<<<<<<< HEAD:autogpt/memory/local.py
             try:
                 with open(self.filename, "w+b") as f:
                     file_content = f.read()
@@ -55,6 +56,12 @@ class LocalCache(MemoryProviderSingleton):
                 f"Warning: The file '{self.filename}' does not exist."
                 "Local memory would not be saved to a file."
             )
+=======
+            with open(self.filename, 'rb') as f:
+                loaded = orjson.loads(f.read())
+                self.data = CacheContent(**loaded)
+        else:
+>>>>>>> 10976b6dfc231a8331ce6d05d89536642c047c0a:scripts/memory/local.py
             self.data = CacheContent()
 
     def add(self, text: str):
@@ -77,8 +84,8 @@ class LocalCache(MemoryProviderSingleton):
         vector = vector[np.newaxis, :]
         self.data.embeddings = np.concatenate(
             [
-                self.data.embeddings,
                 vector,
+                self.data.embeddings,
             ],
             axis=0,
         )
